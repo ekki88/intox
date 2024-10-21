@@ -1,6 +1,6 @@
-const instagramScraper = require('instagram-scraper');
-const moment = require('moment');
-const { TwitterApi } = require('twitter-api-v2');
+import instagramScraper = from 'instagram-scraper';
+import moment = from 'moment';
+import { TwitterApi } = from 'twitter-api-v2';
 
 // 트위터 API 클라이언트 설정
 const client = new TwitterApi({
