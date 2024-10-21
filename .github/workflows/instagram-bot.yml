@@ -1,0 +1,23 @@
+name: Instagram to Twitter Bot
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'   # 매 20분마다 실행
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.12.2'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Instagram Scraping Script
+        run: node your_script.js  # 스크립트 실행
